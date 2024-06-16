@@ -1,0 +1,25 @@
+# Micael Balcazar
+# MO2CaseStudyBalcazar
+#This app takes the name of the student and has the user input the GPA to see if they qualify for the Dean's list or the Honor Roll.
+def main():
+    while True:
+        last_name = input("Enter student's last name (enter 'ZZZ' to quit): ")
+        
+        if last_name == 'ZZZ':
+            print("Exiting program...")
+            break
+        
+        first_name = input("Enter student's first name: ")
+        gpa = float(input("Enter student's GPA: "))
+        
+        if gpa >= 3.5:
+            print(f"{first_name} {last_name} has made the Dean's List!")
+        elif gpa >= 3.25:
+            print(f"{first_name} {last_name} has made the Honor Roll!")
+        else:
+            print(f"Unfortunately, {first_name} {last_name} does not qualify for Dean's List or Honor Roll.")
+        
+        print()  # Just for better readability between different student entries
+
+if __name__ == "__main__":
+    main()
